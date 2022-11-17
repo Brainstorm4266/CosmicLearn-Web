@@ -1,0 +1,197 @@
+$white: rgba(255,255,255,0.3);
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -50px;
+}
+
+.loginError {
+  color: rgba(255,0,0, .8);
+  top: 34em;
+  position: fixed;
+}
+
+.title {
+  position: fixed;
+  bottom: 16em;
+}
+
+.loginText {
+  position: fixed;
+  bottom: 25em;
+}
+
+.footerServerName {
+  top: 40em;
+  position: fixed;
+}
+
+.forgotPassword {
+  position: fixed;
+  top: 32em;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.loading {
+  position: fixed;
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeOut {
+  100% { opacity: 0; }
+}
+
+@keyframes fadeInLogin {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.invis {
+  opacity: 0;
+}
+
+.loading p {
+  text-align: center;
+  opacity: 1;
+  transition: transform 250ms, opacity 400ms;
+  transform: scale(1.2);
+}
+
+.fadingOutAnim {
+  animation: fadeOut 2s;
+  animation-iteration-count: 1;
+}
+
+.fadingAnim {
+  animation: fade 5s;
+  animation-iteration-count: infinite;
+}
+
+.fadingInLoginAnim {
+  animation: fadeInLogin 1s;
+  animation-iteration-count: 1;
+}
+
+.login {
+  position: fixed;
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginForm {
+  position: fixed;
+  top: 20em;
+  input {
+    background: rgba(255,255,255,0.8);
+    width: 200px;
+    padding: .8em;
+    margin-bottom: 2em;
+    border: none;
+    border-radius: 500px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.4);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background: rgba(255,255,255,0.1);
+      box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+    }
+
+    &[type="email"],
+    &[type="password"] {
+      
+      &:focus {
+        background: rgba(255,255,255,0.1);
+        box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+      }
+    }
+    
+    &[type="button"] {
+      margin-top: 10px;
+      width: 150px;
+      font-size: 1rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+      
+      &:active {
+        background: rgba(255,255,255,0.2);
+      }
+    }
+  }
+  button {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.8);
+    width: 200px;
+    padding: .6em;
+    margin-bottom: 2em;
+    border: none;
+    border-radius: 500px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.4);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background: rgba(255,255,255,0.1);
+      box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+    }
+
+    &[type="submit"] {
+      margin-top: 10px;
+      width: 150px;
+      font-size: 1rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:active {
+        background: rgba(255,255,255,0.2);
+      }
+    }
+  }
+}

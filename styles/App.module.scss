@@ -1,0 +1,173 @@
+$white: rgba(255,255,255,0.3);
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.username {
+    position: fixed;
+    bottom: 32em;
+}
+
+.bigbutton {
+    margin: 1rem;
+    flex-basis: 45%;
+    padding: 1.5rem;
+    text-align: left;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.bigbutton:hover,
+.bigbutton:focus,
+.bigbutton:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+.bigbutton h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+.bigbutton p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin-top: 3rem;
+}
+
+.pscreen {
+    position: fixed;
+    min-height: 100vh;
+    padding: 4rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -50px;
+}
+
+.loginError {
+  color: rgba(255,0,0, .8);
+  top: 34em;
+  position: fixed;
+}
+
+.title {
+  position: fixed;
+  bottom: 16em;
+}
+
+@keyframes titleMove {
+    0% {bottom: 16em;}
+    100% {bottom: 20em;}
+}
+
+.fadingInLoginAnim {
+    animation: fadeInLogin 1s;
+    animation-iteration-count: 1;
+  }
+
+.moveTitle {
+    animation: titleMove 1s;
+    animation-iteration-count: 1;
+}
+
+.titleNewPos {
+    bottom: 20em !important;
+}
+
+.loginText {
+  position: fixed;
+  bottom: 25em;
+}
+
+.footerServerName {
+  top: 40em;
+  position: fixed;
+}
+
+.forgotPassword {
+  position: fixed;
+  top: 32em;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.loading {
+  position: fixed;
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeOut {
+  100% { opacity: 0; }
+}
+
+@keyframes fadeInLogin {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.invis {
+  opacity: 0;
+}
+
+.loading p {
+  text-align: center;
+  opacity: 1;
+  transition: transform 250ms, opacity 400ms;
+  transform: scale(1.2);
+}
+
+.fadingOutAnim {
+  animation: fadeOut 2s;
+  animation-iteration-count: 1;
+}
+
+.fadingAnim {
+  animation: fade 5s;
+  animation-iteration-count: infinite;
+}
+
+.fadingInLoginAnim {
+  animation: fadeInLogin 1s;
+  animation-iteration-count: 1;
+}
